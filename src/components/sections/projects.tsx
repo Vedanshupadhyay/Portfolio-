@@ -39,7 +39,7 @@ export default function Projects() {
           {projects.map((project, index) => (
             <Card 
               key={index} 
-              className="group flex flex-col overflow-hidden bg-card/80 border-border/30 hover:border-primary/50 transition-all duration-300 hover:-translate-y-1 relative shadow-lg hover:shadow-primary/20"
+              className="group flex flex-col overflow-hidden bg-card/80 border-border/30 hover:border-primary/50 transition-all duration-300 hover:-translate-y-1 relative shadow-xl hover:shadow-2xl hover:shadow-primary/30"
             >
               <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-accent/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               <CardContent className="p-0">

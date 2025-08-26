@@ -70,7 +70,7 @@ export default function AiAssistant() {
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12">
-          <Card className="shadow-lg">
+          <Card className="shadow-xl">
             <CardHeader>
               <CardTitle>Get Your Feedback</CardTitle>
               <CardDescription>Enter a detailed description of your portfolio below.</CardDescription>
@@ -118,7 +118,7 @@ export default function AiAssistant() {
               </div>
             )}
             {feedback && (
-              <Card className="w-full bg-background shadow-lg shadow-primary/10">
+              <Card className="w-full bg-background shadow-xl shadow-primary/20">
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
                     <Sparkles className="w-6 h-6 text-primary" />
