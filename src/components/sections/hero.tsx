@@ -25,8 +25,20 @@ const StaggeredWord = ({ text, className }: { text: string; className?: string }
 export default function Hero() {
   return (
     <section className="relative h-screen flex items-center justify-center text-center bg-background overflow-hidden">
-      <div className="absolute inset-0 bg-grid-pattern animate-grid-scroll opacity-10" />
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/20 to-background" />
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute z-0 w-full h-full object-cover"
+        poster="https://picsum.photos/1920/1080"
+        data-ai-hint="abstract background"
+      >
+        {/* You will need to replace this with your own video file */}
+        <source src="https://storage.googleapis.com/static.aiforge.dev/showcase/b-roll/5-wavy-background.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <div className="absolute inset-0 bg-background/50 z-1" />
 
       <AnimatedSection as="div" className="relative z-10 px-4">
         <h1
@@ -45,7 +57,7 @@ export default function Hero() {
           className="inline-block animate-fade-in-up"
           style={{ animationDelay: '1s' }}
         >
-          <Button size="lg" className="group shadow-lg shadow-primary/30 hover:shadow-primary/50 transition-shadow">
+          <Button size="lg" className="group shadow-lg shadow-blue-500/30 hover:shadow-blue-500/50 transition-shadow">
             View My Work
             <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
           </Button>
@@ -53,28 +65,6 @@ export default function Hero() {
       </AnimatedSection>
 
       <style jsx>{`
-        .bg-grid-pattern {
-          background-image: linear-gradient(
-              hsl(var(--primary) / 0.1) 1px,
-              transparent 1px
-            ),
-            linear-gradient(
-              to right,
-              hsl(var(--primary) / 0.1) 1px,
-              transparent 1px
-            );
-          background-size: 3rem 3rem;
-        }
-
-        @keyframes grid-scroll {
-          from { background-position: 0 0; }
-          to { background-position: -3rem -3rem; }
-        }
-
-        .animate-grid-scroll {
-          animation: grid-scroll 3s linear infinite;
-        }
-
         @keyframes reveal {
           from {
             opacity: 0;
