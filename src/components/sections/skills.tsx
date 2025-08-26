@@ -29,7 +29,10 @@ export default function Skills() {
         </h2>
         <div className="grid md:grid-cols-3 gap-8 text-center">
           {skillCategories.map((category, index) => (
-            <div key={index} className="flex flex-col items-center p-6 bg-card rounded-lg">
+            <div 
+              key={index} 
+              className="flex flex-col items-center p-6 bg-card rounded-lg transition-all duration-300 hover:shadow-primary/20 hover:shadow-lg hover:-translate-y-1"
+            >
               {category.icon}
               <h3 className="text-2xl font-bold my-4">{category.title}</h3>
               <ul className="space-y-2">
