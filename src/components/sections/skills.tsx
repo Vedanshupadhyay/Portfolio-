@@ -23,7 +23,7 @@ const skillCategories = [
 
 export default function Skills() {
   return (
-    <AnimatedSection id="skills" className="bg-muted/10">
+    <AnimatedSection id="skills" className="bg-muted/10 py-20 sm:py-28">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12 font-headline">
           My Tech Stack

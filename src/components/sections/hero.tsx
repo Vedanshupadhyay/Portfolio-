@@ -25,7 +25,7 @@ const StaggeredWord = ({ text, className }: { text: string; className?: string }
 export default function Hero() {
   return (
     <section className="relative h-screen flex items-center justify-center text-center bg-background overflow-hidden">
-      <div className="absolute inset-0 bg-grid-pattern opacity-10" />
+      <div className="absolute inset-0 bg-grid-pattern animate-grid-scroll opacity-10" />
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/20 to-background" />
 
       <AnimatedSection as="div" className="relative z-10 px-4">
@@ -64,6 +64,15 @@ export default function Hero() {
               transparent 1px
             );
           background-size: 3rem 3rem;
+        }
+
+        @keyframes grid-scroll {
+          from { background-position: 0 0; }
+          to { background-position: -3rem -3rem; }
+        }
+
+        .animate-grid-scroll {
+          animation: grid-scroll 3s linear infinite;
         }
 
         @keyframes reveal {

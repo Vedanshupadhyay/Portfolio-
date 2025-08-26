@@ -47,8 +47,8 @@ export default function AnimatedSection({ children, className, id, as: Tag = 'se
       id={id}
       ref={ref}
       className={cn(
-        'transition-all duration-700 ease-out py-20 sm:py-28',
-        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8',
+        'transition-all duration-1000 ease-in-out',
+        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12',
         className
       )}
     >
