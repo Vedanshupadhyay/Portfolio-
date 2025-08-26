@@ -10,11 +10,11 @@ import AnimatedSection from '../animated-section';
 import { cn } from '@/lib/utils';
 
 const backgroundImages = [
-  { url: 'https://picsum.photos/1920/1080?random=20', hint: 'aurora borealis' },
-  { url: 'https://picsum.photos/1920/1080?random=21', hint: 'desert dunes' },
-  { url: 'https://picsum.photos/1920/1080?random=22', hint: 'canyon river' },
-  { url: 'https://picsum.photos/1920/1080?random=23', hint: 'tropical beach' },
-  { url: 'https://picsum.photos/1920/1080?random=24', hint: 'lavender fields' },
+  { url: 'https://picsum.photos/1920/1080?random=30', hint: 'mountain sunrise' },
+  { url: 'https://picsum.photos/1920/1080?random=31', hint: 'sandy beach' },
+  { url: 'https://picsum.photos/1920/1080?random=32', hint: 'rocky coast' },
+  { url: 'https://picsum.photos/1920/1080?random=33', hint: 'snowy peak' },
+  { url: 'https://picsum.photos/1920/1080?random=34', hint: 'ocean waves' },
 ];
 
 const StaggeredWord = ({ text, className }: { text: string; className?: string }) => {
