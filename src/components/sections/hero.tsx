@@ -5,7 +5,6 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
 import AnimatedSection from '../animated-section';
-import Image from 'next/image';
 
 const StaggeredWord = ({ text, className }: { text: string; className?: string }) => {
   return (
@@ -26,14 +25,17 @@ const StaggeredWord = ({ text, className }: { text: string; className?: string }
 export default function Hero() {
   return (
     <section className="relative h-screen flex items-center justify-center text-center bg-background overflow-hidden">
-      <Image
-        alt="Lush mountains under a clear sky"
-        src="https://picsum.photos/1920/1080"
-        data-ai-hint="mountains forest"
-        fill
-        className="object-cover z-0"
-        priority
-      />
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute z-0 w-full h-full object-cover"
+        key="hero-video-bg"
+      >
+        <source src="https://storage.googleapis.com/builder-prod-cb2ee/upload/1724660490795_abstract_animation.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
       <div className="absolute inset-0 bg-background/50 z-1" />
 
       <AnimatedSection as="div" className="relative z-10 px-4">
