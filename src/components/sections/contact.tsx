@@ -11,7 +11,9 @@ import { Input } from '../ui/input';
 import { Textarea } from '../ui/textarea';
 import { useToast } from '@/hooks/use-toast';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '../ui/card';
-import { Mail, Send } from 'lucide-react';
+import { Mail, Send, Loader2 } from 'lucide-react';
+import { saveContactMessage } from '@/app/actions';
+import { useState } from 'react';
 
 const formSchema = z.object({
   name: z.string().min(2, { message: 'Name must be at least 2 characters.' }),
@@ -23,6 +25,7 @@ type FormValues = z.infer<typeof formSchema>;
 
 export default function Contact() {
   const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const form = useForm<FormValues>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -32,13 +35,28 @@ export default function Contact() {
     },
   });
   
-  const onSubmit: SubmitHandler<FormValues> = (data) => {
-    console.log(data); // In a real app, you would send this data to a server
-    toast({
-      title: 'Message Sent!',
-      description: 'Thank you for reaching out. I will get back to you soon.',
-    });
-    form.reset();
+  const onSubmit: SubmitHandler<FormValues> = async (data) => {
+    setIsSubmitting(true);
+    try {
+      const result = await saveContactMessage(data);
+      if (result.success) {
+        toast({
+          title: 'Message Sent!',
+          description: 'Thank you for reaching out. I will get back to you soon.',
+        });
+        form.reset();
+      } else {
+        throw new Error(result.error);
+      }
+    } catch (error) {
+      toast({
+        variant: 'destructive',
+        title: 'An error occurred',
+        description: error instanceof Error ? error.message : 'Could not send message.',
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -99,9 +117,18 @@ export default function Contact() {
                     </FormItem>
                   )}
                 />
-                <Button type="submit" className="w-full group">
-                  Send Message
-                  <Send className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                <Button type="submit" className="w-full group" disabled={isSubmitting}>
+                  {isSubmitting ? (
+                    <>
+                      <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                      Sending...
+                    </>
+                  ) : (
+                    <>
+                      Send Message
+                      <Send className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                    </>
+                  )}
                 </Button>
               </form>
             </Form>
