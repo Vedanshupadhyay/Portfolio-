@@ -1,4 +1,3 @@
-
 'use client';
 
 import { useState, useEffect } from 'react';
@@ -10,11 +9,11 @@ import AnimatedSection from '../animated-section';
 import { cn } from '@/lib/utils';
 
 const backgroundImages = [
-  { url: 'https://picsum.photos/1920/1080?random=30', hint: 'mountain sunrise' },
-  { url: 'https://picsum.photos/1920/1080?random=31', hint: 'sandy beach' },
-  { url: 'https://picsum.photos/1920/1080?random=32', hint: 'rocky coast' },
-  { url: 'https://picsum.photos/1920/1080?random=33', hint: 'snowy peak' },
-  { url: 'https://picsum.photos/1920/1080?random=34', hint: 'ocean waves' },
+  { url: 'https://picsum.photos/1920/1080?random=40', hint: 'coastal mountains' },
+  { url: 'https://picsum.photos/1920/1080?random=41', hint: 'tropical beach' },
+  { url: 'https://picsum.photos/1920/1080?random=42', hint: 'mountain lake' },
+  { url: 'https://picsum.photos/1920/1080?random=43', hint: 'sunset waves' },
+  { url: 'https://picsum.photos/1920/1080?random=44', hint: 'alpine meadow' },
 ];
 
 const StaggeredWord = ({ text, className }: { text: string; className?: string }) => {
