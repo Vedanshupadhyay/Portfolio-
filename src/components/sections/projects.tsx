@@ -37,7 +37,11 @@ export default function Projects() {
         </h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
-            <Card key={index} className="flex flex-col overflow-hidden shadow-lg hover:shadow-primary/20 hover:-translate-y-2 transition-all duration-300">
+            <Card 
+              key={index} 
+              className="flex flex-col overflow-hidden shadow-lg hover:shadow-primary/20 hover:-translate-y-2 transition-all duration-300"
+              style={{ transitionDelay: `${index * 150}ms` }}
+            >
               <CardContent className="p-0">
                 <Image
                   src={project.image}

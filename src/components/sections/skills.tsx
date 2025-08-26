@@ -30,7 +30,11 @@ export default function Skills() {
         </h2>
         <div className="grid md:grid-cols-3 gap-8">
           {skillCategories.map((category, index) => (
-            <Card key={index} className="flex flex-col text-center items-center shadow-lg hover:shadow-primary/20 hover:-translate-y-2 transition-all duration-300 bg-card">
+            <Card 
+              key={index} 
+              className="flex flex-col text-center items-center shadow-lg hover:shadow-primary/20 hover:-translate-y-2 transition-all duration-300 bg-card"
+              style={{ transitionDelay: `${index * 150}ms` }}
+            >
               <CardHeader className="items-center">
                 {category.icon}
                 <CardTitle className="mt-4">{category.title}</CardTitle>
