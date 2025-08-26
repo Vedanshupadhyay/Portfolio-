@@ -13,13 +13,6 @@ const projects = [
     technologies: ['Java', 'Spring Boot', 'React', 'PostgreSQL', 'Stripe API'],
   },
   {
-    title: 'Social Media Dashboard',
-    description: 'A responsive dashboard for social media analytics, providing users with insights into their account performance, audience growth, and content engagement.',
-    image: 'https://picsum.photos/600/400?random=2',
-    imageHint: 'social media',
-    technologies: ['Next.js', 'Node.js', 'MongoDB', 'Tailwind CSS', 'Chart.js'],
-  },
-  {
     title: 'Real-time Chat App',
     description: 'A web-based chat application that enables users to communicate in real-time through public and private channels, featuring typing indicators and online statuses.',
     image: 'https://picsum.photos/600/400?random=3',
