@@ -17,22 +17,6 @@ const backgroundImages = [
   { url: 'https://picsum.photos/1920/1080?random=54', hint: 'cloudy mountains' },
 ];
 
-const StaggeredWord = ({ text, className }: { text: string; className?: string }) => {
-  return (
-    <span className={className}>
-      {text.split('').map((char, index) => (
-        <span
-          key={index}
-          className="inline-block animate-reveal"
-          style={{ animationDelay: `${index * 0.05}s` }}
-        >
-          {char === ' ' ? '\u00A0' : char}
-        </span>
-      ))}
-    </span>
-  );
-};
-
 export default function Hero() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
@@ -45,7 +29,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="relative h-screen flex items-center justify-center text-center bg-background overflow-hidden">
+    <section className="relative h-screen flex items-center justify-center text-center overflow-hidden">
       {backgroundImages.map((image, index) => (
         <Image
           key={index}
@@ -60,62 +44,33 @@ export default function Hero() {
           )}
         />
       ))}
-      <div className="absolute inset-0 bg-background/60 z-1" />
+      <div className="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-transparent z-1" />
 
       <AnimatedSection as="div" className="relative z-10 px-4">
-        <h1 className="text-5xl sm:text-7xl md:text-8xl font-extrabold tracking-tighter mb-4 font-headline bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400">
-          <StaggeredWord text="Developer. Innovator." />
+        <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold tracking-tight mb-4">
+          Developer. Innovator.
         </h1>
-        <p className="max-w-2xl mx-auto text-lg md:text-xl text-muted-foreground mb-8 animate-fade-in-up" style={{ animationDelay: '0.8s' }}>
+        <p className="max-w-2xl mx-auto text-lg md:text-xl text-muted-foreground mb-8">
           Crafting high-performance digital experiences from server to screen.
         </p>
-        <Link href="#projects" className="inline-block animate-fade-in-up" style={{ animationDelay: '1s' }}>
-          <Button size="lg" className="group shadow-lg shadow-primary/20 hover:shadow-primary/30 transition-shadow duration-300">
+        <Link href="#projects">
+          <Button size="lg" className="group">
             View My Work
             <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
           </Button>
         </Link>
       </AnimatedSection>
-
       <style jsx>{`
-        @keyframes reveal {
-          from {
-            opacity: 0;
-            transform: translateY(30px) skewY(10deg);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0) skewY(0deg);
-          }
-        }
-        .animate-reveal {
-          animation: reveal 0.8s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
-          opacity: 0;
-        }
-        @keyframes fade-in-up {
-          from {
-            opacity: 0;
-            transform: translateY(20px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-        .animate-fade-in-up {
-          animation: fade-in-up 0.5s ease-out forwards;
-          opacity: 0;
-        }
         @keyframes ken-burns {
           0% {
-            transform: scale(1.0) translate(0, 0);
+            transform: scale(1) translate(0, 0);
           }
           100% {
             transform: scale(1.1) translate(-2%, 2%);
           }
         }
         .animate-ken-burns {
-          animation: ken-burns 5s ease-out forwards;
+          animation: ken-burns 20s ease-out forwards;
         }
       `}</style>
     </section>

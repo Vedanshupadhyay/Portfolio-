@@ -24,8 +24,7 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
       </head>
-      <body className={cn('font-body antialiased min-h-screen flex flex-col bg-background relative')}>
-        <div className="fixed inset-0 z-[-1] bg-animated-gradient" />
+      <body className={cn('font-sans antialiased min-h-screen flex flex-col bg-background')}>
         <Header />
         <main className="flex-grow">{children}</main>
         <Footer />

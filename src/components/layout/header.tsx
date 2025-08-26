@@ -40,22 +40,22 @@ export default function Header() {
     <>
       <header
         className={cn(
-          'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
-          scrolled ? 'bg-background/80 backdrop-blur-lg shadow-lg shadow-primary/10' : 'bg-transparent'
+          'fixed top-0 left-0 right-0 z-50 transition-colors duration-300',
+          scrolled ? 'bg-background/80 backdrop-blur-sm' : 'bg-transparent'
         )}
       >
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
-            <Link href="/" className="flex items-center gap-2 text-xl font-bold">
+            <Link href="/" className="flex items-center gap-2">
               <Code className="w-8 h-8 text-primary" />
-              <span className="font-headline">Vedansh Upadhyay</span>
+              <span className="text-xl font-bold">Vedansh Upadhyay</span>
             </Link>
-            <nav className="hidden md:flex items-center space-x-2">
+            <nav className="hidden md:flex items-center space-x-1">
               {navLinks.map((link) => (
                 <Button key={link.href} variant="ghost" asChild>
                   <Link
                     href={link.href}
-                    className="text-sm font-medium text-foreground/80 hover:text-primary transition-colors px-4 py-2"
+                    className="font-medium text-foreground/80 hover:text-foreground transition-colors"
                   >
                     {link.label}
                   </Link>
@@ -74,17 +74,17 @@ export default function Header() {
       {/* Mobile Menu Overlay */}
       <div
         className={cn(
-          'fixed inset-0 z-40 bg-background/95 backdrop-blur-lg transition-transform duration-300 ease-in-out md:hidden',
+          'fixed inset-0 z-40 bg-background/95 backdrop-blur-sm transition-transform duration-300 ease-in-out md:hidden',
           mobileMenuOpen ? 'translate-y-0' : '-translate-y-full'
         )}
       >
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 h-full flex flex-col justify-center items-center">
-           <nav className="flex flex-col items-center space-y-8">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 mt-20 h-full flex flex-col items-center">
+           <nav className="flex flex-col items-center space-y-6">
               {navLinks.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="text-2xl font-medium text-foreground hover:text-primary transition-colors"
+                  className="text-xl font-medium text-foreground hover:text-primary transition-colors"
                   onClick={handleLinkClick}
                 >
                   {link.label}

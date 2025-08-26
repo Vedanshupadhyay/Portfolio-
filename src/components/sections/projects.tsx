@@ -30,35 +30,36 @@ const projects = [
 
 export default function Projects() {
   return (
-    <AnimatedSection id="projects" className="py-24 sm:py-32 bg-background">
+    <AnimatedSection id="projects" className="py-24 sm:py-32">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-4xl sm:text-5xl font-bold text-center mb-16 font-headline text-foreground">
+        <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12">
           Featured Projects
         </h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
             <Card 
               key={index} 
-              className="group flex flex-col overflow-hidden bg-card border-border/50 hover:border-primary/50 transition-all duration-300 hover:-translate-y-2 relative shadow-2xl hover:shadow-primary/20"
+              className="group overflow-hidden transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
             >
-              <CardContent className="p-0 overflow-hidden">
-                <Image
-                  src={project.image}
-                  alt={project.title}
-                  data-ai-hint={project.imageHint}
-                  width={600}
-                  height={400}
-                  className="object-cover w-full h-48 transition-transform duration-500 ease-out group-hover:scale-110"
-                />
+              <CardContent className="p-0">
+                <div className="relative aspect-video">
+                  <Image
+                    src={project.image}
+                    alt={project.title}
+                    data-ai-hint={project.imageHint}
+                    fill
+                    className="object-cover transition-transform duration-500 ease-out group-hover:scale-105"
+                  />
+                </div>
               </CardContent>
               <CardHeader>
-                <CardTitle className="text-foreground group-hover:text-primary transition-colors duration-300">{project.title}</CardTitle>
-                <CardDescription className="pt-2 h-20 text-muted-foreground">{project.description}</CardDescription>
+                <CardTitle>{project.title}</CardTitle>
+                <CardDescription>{project.description}</CardDescription>
               </CardHeader>
-              <CardContent className="mt-auto">
+              <CardContent>
                 <div className="flex flex-wrap gap-2">
                   {project.technologies.map((tech) => (
-                    <Badge key={tech} variant="secondary" className="bg-secondary/80 text-secondary-foreground/80">{tech}</Badge>
+                    <Badge key={tech} variant="secondary">{tech}</Badge>
                   ))}
                 </div>
               </CardContent>

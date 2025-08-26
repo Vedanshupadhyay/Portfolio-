@@ -26,7 +26,7 @@ export default function AnimatedSection({ children, className, id, as: Tag = 'se
         }
       },
       {
-        rootMargin: '0px 0px -50px 0px',
+        rootMargin: '0px 0px -100px 0px',
         threshold: 0.1,
       }
     );
@@ -47,8 +47,8 @@ export default function AnimatedSection({ children, className, id, as: Tag = 'se
       id={id}
       ref={ref}
       className={cn(
-        'transition-all duration-1000 ease-out',
-        isVisible ? 'opacity-100 translate-y-0 blur-0' : 'opacity-0 translate-y-10 blur-md',
+        'transition-all duration-700 ease-out',
+        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8',
         className
       )}
     >
