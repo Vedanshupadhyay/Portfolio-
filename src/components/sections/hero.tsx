@@ -32,9 +32,9 @@ export default function Hero() {
         playsInline
         className="absolute z-0 w-full h-full object-cover"
         poster="https://picsum.photos/1920/1080"
-        data-ai-hint="majestic mountains"
+        data-ai-hint="abstract animation"
       >
-        <source src="https://storage.googleapis.com/static.aiforge.dev/b-roll/2/undulating-mountains.mp4" type="video/mp4" />
+        <source src="https://storage.googleapis.com/static.aiforge.dev/b-roll/2/abstract-dots.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
       <div className="absolute inset-0 bg-background/50 z-1" />
