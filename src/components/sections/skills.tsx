@@ -1,5 +1,5 @@
 
-import { BrainCircuit, CodeXml, Database, GitBranch, Laptop } from 'lucide-react';
+import { BrainCircuit, Laptop, Database } from 'lucide-react';
 import AnimatedSection from '../animated-section';
 import { Card, CardHeader, CardTitle, CardContent } from '../ui/card';
 
@@ -23,7 +23,7 @@ const skillCategories = [
 
 export default function Skills() {
   return (
-    <AnimatedSection id="skills" className="bg-muted/20">
+    <AnimatedSection id="skills" className="bg-muted/10">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12 font-headline">
           My Tech Stack
@@ -32,7 +32,7 @@ export default function Skills() {
           {skillCategories.map((category, index) => (
             <Card 
               key={index} 
-              className="flex flex-col text-center items-center shadow-lg hover:shadow-primary/20 hover:-translate-y-2 transition-all duration-300 bg-card"
+              className="flex flex-col text-center items-center shadow-lg border-primary/20 hover:shadow-primary/40 hover:-translate-y-2 transition-all duration-300 bg-card"
               style={{ transitionDelay: `${index * 150}ms` }}
             >
               <CardHeader className="items-center">

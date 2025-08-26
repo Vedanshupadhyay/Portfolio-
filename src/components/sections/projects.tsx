@@ -39,7 +39,7 @@ export default function Projects() {
           {projects.map((project, index) => (
             <Card 
               key={index} 
-              className="flex flex-col overflow-hidden shadow-lg hover:shadow-primary/20 hover:-translate-y-2 transition-all duration-300"
+              className="flex flex-col overflow-hidden border-primary/20 shadow-lg hover:shadow-primary/40 hover:-translate-y-2 transition-all duration-300"
               style={{ transitionDelay: `${index * 150}ms` }}
             >
               <CardContent className="p-0">
