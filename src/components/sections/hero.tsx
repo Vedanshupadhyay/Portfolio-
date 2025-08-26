@@ -9,8 +9,8 @@ import AnimatedSection from '../animated-section';
 export default function Hero() {
   return (
     <section className="relative h-screen flex items-center justify-center text-center bg-background overflow-hidden">
-      <div className="absolute inset-0 bg-grid-pattern opacity-20" />
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/50 to-background" />
+      <div className="absolute inset-0 bg-grid-pattern opacity-10" />
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/20 to-background" />
 
       <AnimatedSection as="div" className="relative z-10 px-4">
         <h1

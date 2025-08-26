@@ -39,9 +39,12 @@ export default function Projects() {
           {projects.map((project, index) => (
             <Card 
               key={index} 
-              className="flex flex-col overflow-hidden border-primary/20 shadow-lg hover:shadow-primary/40 hover:-translate-y-2 transition-all duration-300"
-              style={{ transitionDelay: `${index * 150}ms` }}
+              className="group flex flex-col overflow-hidden bg-card/50 border-border/30 hover:border-primary/50 transition-all duration-300 hover:-translate-y-1 relative"
+              style={{ transitionDelay: `${index * 150}ms`, background: 'radial-gradient(circle at top left, hsl(var(--primary)/0.05), transparent 30%)' }}
             >
+              <div className="absolute inset-0 border-2 border-transparent group-hover:border-primary/50 rounded-lg transition-all duration-300 pointer-events-none" 
+                   style={{ maskImage: 'radial-gradient(ellipse 100% 100% at 0% 0%, black 0%, transparent 50%)' }} />
+
               <CardContent className="p-0">
                 <Image
                   src={project.image}
@@ -54,7 +57,7 @@ export default function Projects() {
               </CardContent>
               <CardHeader>
                 <CardTitle>{project.title}</CardTitle>
-                <CardDescription className="pt-2 h-24">{project.description}</CardDescription>
+                <CardDescription className="pt-2 h-20">{project.description}</CardDescription>
               </CardHeader>
               <CardContent className="mt-auto">
                 <div className="flex flex-wrap gap-2">

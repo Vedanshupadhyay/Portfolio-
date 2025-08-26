@@ -32,7 +32,7 @@ export default function Skills() {
           {skillCategories.map((category, index) => (
             <Card 
               key={index} 
-              className="flex flex-col text-center items-center shadow-lg border-primary/20 hover:shadow-primary/40 hover:-translate-y-2 transition-all duration-300 bg-card"
+              className="flex flex-col text-center items-center shadow-lg border-border/20 hover:border-primary/50 hover:shadow-primary/20 hover:-translate-y-2 transition-all duration-300 bg-card/50"
               style={{ transitionDelay: `${index * 150}ms` }}
             >
               <CardHeader className="items-center">
