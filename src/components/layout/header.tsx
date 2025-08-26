@@ -41,7 +41,7 @@ export default function Header() {
       <header
         className={cn(
           'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
-          scrolled ? 'bg-background/80 backdrop-blur-sm shadow-lg shadow-primary/10' : 'bg-transparent'
+          scrolled ? 'bg-background/80 backdrop-blur-lg shadow-lg shadow-primary/10' : 'bg-transparent'
         )}
       >
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -50,15 +50,16 @@ export default function Header() {
               <Code className="w-8 h-8 text-primary" />
               <span className="font-headline">Vedansh Upadhyay</span>
             </Link>
-            <nav className="hidden md:flex items-center space-x-6">
+            <nav className="hidden md:flex items-center space-x-2">
               {navLinks.map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className="text-sm font-medium text-foreground/80 hover:text-primary transition-colors"
-                >
-                  {link.label}
-                </Link>
+                <Button key={link.href} variant="ghost" asChild>
+                  <Link
+                    href={link.href}
+                    className="text-sm font-medium text-foreground/80 hover:text-primary transition-colors px-4 py-2"
+                  >
+                    {link.label}
+                  </Link>
+                </Button>
               ))}
             </nav>
             <div className="md:hidden">

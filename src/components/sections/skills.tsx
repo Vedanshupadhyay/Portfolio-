@@ -23,21 +23,21 @@ const skillCategories = [
 
 export default function Skills() {
   return (
-    <AnimatedSection id="skills" className="bg-muted/10 py-20 sm:py-28">
+    <AnimatedSection id="skills" className="bg-muted/20 py-24 sm:py-32">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12 font-headline">
+        <h2 className="text-4xl sm:text-5xl font-bold text-center mb-16 font-headline text-foreground">
           My Tech Stack
         </h2>
         <div className="grid md:grid-cols-3 gap-8">
           {skillCategories.map((category, index) => (
             <Card 
               key={index} 
-              className="flex flex-col text-center items-center shadow-2xl border-border/20 hover:border-primary/50 hover:shadow-primary/30 hover:-translate-y-2 transition-all duration-300 bg-card/50"
-              style={{ transitionDelay: `${index * 150}ms` }}
+              className="flex flex-col text-center items-center shadow-2xl border-border/50 bg-card hover:border-primary/50 hover:shadow-primary/20 hover:-translate-y-2 transition-all duration-300"
+              style={{ transitionDelay: `${index * 100}ms` }}
             >
               <CardHeader className="items-center">
                 {category.icon}
-                <CardTitle className="mt-4">{category.title}</CardTitle>
+                <CardTitle className="mt-4 text-foreground">{category.title}</CardTitle>
               </CardHeader>
               <CardContent>
                 <ul className="space-y-2">

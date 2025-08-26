@@ -5,14 +5,14 @@ import { Card, CardContent } from '../ui/card';
 
 export default function About() {
   return (
-    <AnimatedSection id="about" className="bg-background">
+    <AnimatedSection id="about" className="py-24 sm:py-32 bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12 font-headline">
+        <h2 className="text-4xl sm:text-5xl font-bold text-center mb-16 font-headline text-foreground">
           About Me
         </h2>
         <div className="grid md:grid-cols-5 gap-12 items-center">
           <div className="md:col-span-2">
-            <Card className="overflow-hidden shadow-2xl border-primary/20 transition-all duration-300 hover:shadow-primary/50 hover:scale-105">
+            <Card className="overflow-hidden shadow-2xl border-primary/20 transition-all duration-500 hover:shadow-primary/30 hover:scale-105 hover:border-primary/40">
               <CardContent className="p-0">
                 <Image
                   src="https://picsum.photos/600/800"
@@ -26,10 +26,10 @@ export default function About() {
             </Card>
           </div>
           <div className="md:col-span-3">
-            <p className="text-lg text-muted-foreground mb-4 leading-relaxed">
+            <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
               Hello! I'm Vedansh Upadhyay, a passionate full-stack developer with a strong foundation in computer science principles and a drive for creating elegant, high-performance applications. My expertise spans from building robust back-end systems with Java to crafting dynamic and responsive user interfaces with modern web technologies.
             </p>
-            <p className="text-lg text-muted-foreground mb-4 leading-relaxed">
+            <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
               I thrive on solving complex problems, whether it's optimizing algorithms (thanks to my love for DSA and OOP) or architecting scalable cloud solutions. I'm constantly learning and exploring new tools to stay at the forefront of technology.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">

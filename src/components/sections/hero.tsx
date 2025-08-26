@@ -1,3 +1,4 @@
+
 'use client';
 
 import { useState, useEffect } from 'react';
@@ -55,12 +56,11 @@ export default function Hero() {
           priority={index === 0}
           className={cn(
             'absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out',
-            index === currentImageIndex ? 'opacity-100 animate-zoom-in' : 'opacity-0'
+            index === currentImageIndex ? 'opacity-20 animate-ken-burns' : 'opacity-0'
           )}
-          style={{ animationDuration: '5s' }}
         />
       ))}
-      <div className="absolute inset-0 bg-background/50 z-1" />
+      <div className="absolute inset-0 bg-background/60 z-1" />
 
       <AnimatedSection as="div" className="relative z-10 px-4">
         <h1 className="text-5xl sm:text-7xl md:text-8xl font-extrabold tracking-tighter mb-4 font-headline bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400">
@@ -70,7 +70,7 @@ export default function Hero() {
           Crafting high-performance digital experiences from server to screen.
         </p>
         <Link href="#projects" className="inline-block animate-fade-in-up" style={{ animationDelay: '1s' }}>
-          <Button size="lg" className="group shadow-lg shadow-blue-500/30 hover:shadow-blue-500/50 transition-shadow">
+          <Button size="lg" className="group shadow-lg shadow-primary/20 hover:shadow-primary/30 transition-shadow duration-300">
             View My Work
             <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
           </Button>
@@ -106,16 +106,16 @@ export default function Hero() {
           animation: fade-in-up 0.5s ease-out forwards;
           opacity: 0;
         }
-        @keyframes zoom-in {
-          from {
-            transform: scale(1);
+        @keyframes ken-burns {
+          0% {
+            transform: scale(1.0) translate(0, 0);
           }
-          to {
-            transform: scale(1.1);
+          100% {
+            transform: scale(1.1) translate(-2%, 2%);
           }
         }
-        .animate-zoom-in {
-          animation: zoom-in 5s linear forwards;
+        .animate-ken-burns {
+          animation: ken-burns 5s ease-out forwards;
         }
       `}</style>
     </section>

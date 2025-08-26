@@ -60,18 +60,18 @@ export default function Contact() {
   };
 
   return (
-    <AnimatedSection id="contact" className="bg-background">
+    <AnimatedSection id="contact" className="py-24 sm:py-32 bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold mb-4 font-headline">Get In Touch</h2>
+          <h2 className="text-4xl sm:text-5xl font-bold mb-4 font-headline text-foreground">Get In Touch</h2>
           <p className="max-w-2xl mx-auto text-muted-foreground mb-12">
-            Have a project in mind or just want to say hello? Feel free to reach out.
+            Have a project in mind or just want to say hello? I'd love to hear from you.
           </p>
         </div>
-        <Card className="max-w-2xl mx-auto shadow-2xl border-primary/20 hover:shadow-primary/50 transition-shadow duration-300">
+        <Card className="max-w-2xl mx-auto shadow-2xl bg-card border-border/50 hover:border-primary/30 transition-all duration-300">
           <CardHeader>
-            <CardTitle className="flex items-center gap-2">
-              <Mail className="w-6 h-6" /> Contact Me
+            <CardTitle className="flex items-center gap-2 text-foreground">
+              <Mail className="w-6 h-6 text-primary" /> Contact Me
             </CardTitle>
             <CardDescription>Fill out the form below and I'll get back to you as soon as possible.</CardDescription>
           </CardHeader>
@@ -117,7 +117,7 @@ export default function Contact() {
                     </FormItem>
                   )}
                 />
-                <Button type="submit" className="w-full group" disabled={isSubmitting}>
+                <Button type="submit" className="w-full group" size="lg" disabled={isSubmitting}>
                   {isSubmitting ? (
                     <>
                       <Loader2 className="mr-2 h-4 w-4 animate-spin" />
