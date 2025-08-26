@@ -97,9 +97,9 @@ body {
   .bg-animated-gradient {
     background: linear-gradient(
       -45deg,
-      hsl(0 0% 100% / 0.1),
+      hsl(var(--primary) / 0.1),
       hsl(var(--background)),
-      hsl(0 0% 100% / 0.05),
+      hsl(var(--accent) / 0.1),
       hsl(var(--background))
     );
     background-size: 400% 400%;

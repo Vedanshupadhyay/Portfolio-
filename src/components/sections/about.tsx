@@ -12,7 +12,7 @@ export default function About() {
         </h2>
         <div className="grid md:grid-cols-5 gap-12 items-center">
           <div className="md:col-span-2">
-            <Card className="overflow-hidden shadow-xl border-primary/20 transition-all duration-300 hover:shadow-2xl hover:shadow-primary/50 hover:scale-105">
+            <Card className="overflow-hidden shadow-2xl border-primary/20 transition-all duration-300 hover:shadow-primary/50 hover:scale-105">
               <CardContent className="p-0">
                 <Image
                   src="https://picsum.photos/600/800"

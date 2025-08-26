@@ -68,7 +68,7 @@ export default function Contact() {
             Have a project in mind or just want to say hello? Feel free to reach out.
           </p>
         </div>
-        <Card className="max-w-2xl mx-auto shadow-xl border-primary/20 hover:shadow-2xl hover:shadow-primary/50 transition-shadow duration-300">
+        <Card className="max-w-2xl mx-auto shadow-2xl border-primary/20 hover:shadow-primary/50 transition-shadow duration-300">
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
               <Mail className="w-6 h-6" /> Contact Me
