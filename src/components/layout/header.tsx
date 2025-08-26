@@ -49,7 +49,7 @@ export default function Header() {
           <div className="flex items-center justify-between h-20">
             <Link href="/" className="flex items-center gap-2 text-xl font-bold">
               <Code className="w-8 h-8 text-primary" />
-              <span className="font-headline">DevFolio X</span>
+              <span className="font-headline">Vedansh Upadhyay</span>
             </Link>
             <nav className="hidden md:flex items-center space-x-6">
               {navLinks.map((link) => (

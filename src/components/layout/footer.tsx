@@ -10,10 +10,10 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row items-center justify-between">
           <div className="flex items-center gap-2 mb-4 md:mb-0">
             <Code className="w-6 h-6 text-primary" />
-            <span className="font-headline text-lg">DevFolio X</span>
+            <span className="font-headline text-lg">Vedansh Upadhyay</span>
           </div>
           <p className="text-sm text-muted-foreground">
-            © {currentYear} DevFolio X. All rights reserved.
+            © {currentYear} Vedansh Upadhyay. All rights reserved.
           </p>
         </div>
       </div>

@@ -7,7 +7,7 @@ import Footer from '@/components/layout/footer';
 import { Toaster } from '@/components/ui/toaster';
 
 export const metadata: Metadata = {
-  title: 'DevFolio X - Full-Stack Developer Portfolio',
+  title: 'Vedansh Upadhyay - Full-Stack Developer Portfolio',
   description:
     'A modern, animated portfolio for a full-stack developer showcasing skills in Java, DSA, OOP, and web technologies.',
 };
