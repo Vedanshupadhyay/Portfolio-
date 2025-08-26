@@ -27,7 +27,7 @@ export default function Hero() {
   return (
     <section className="relative h-screen flex items-center justify-center text-center bg-background overflow-hidden">
       <Image
-        src="https://picsum.photos/1920/1080"
+        src="https://picsum.photos/seed/mountains/1920/1080"
         alt="Lush green mountains under a cloudy sky"
         data-ai-hint="mountains forest"
         fill
