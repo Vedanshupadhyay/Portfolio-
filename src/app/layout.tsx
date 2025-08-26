@@ -5,8 +5,6 @@ import { cn } from '@/lib/utils';
 import Header from '@/components/layout/header';
 import Footer from '@/components/layout/footer';
 import { Toaster } from '@/components/ui/toaster';
-import SmoothScrollProvider from '@/components/layout/smooth-scroll-provider';
-import ThreeBackground from '@/components/three-background';
 
 export const metadata: Metadata = {
   title: 'Vedansh Upadhyay - Full-Stack Developer Portfolio',
@@ -27,14 +25,11 @@ export default function RootLayout({
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
       </head>
       <body className={cn('font-body antialiased min-h-screen flex flex-col bg-background relative')}>
-        <ThreeBackground />
-        <SmoothScrollProvider>
-          <div className="fixed inset-0 z-[-1] bg-animated-gradient opacity-20" />
-          <Header />
-          <main className="flex-grow">{children}</main>
-          <Footer />
-          <Toaster />
-        </SmoothScrollProvider>
+        <div className="fixed inset-0 z-[-1] bg-animated-gradient" />
+        <Header />
+        <main className="flex-grow">{children}</main>
+        <Footer />
+        <Toaster />
       </body>
     </html>
   );
