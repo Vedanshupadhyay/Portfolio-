@@ -39,12 +39,9 @@ export default function Projects() {
           {projects.map((project, index) => (
             <Card 
               key={index} 
-              className="group flex flex-col overflow-hidden bg-card/50 border-border/30 hover:border-primary/50 transition-all duration-300 hover:-translate-y-1 relative"
-              style={{ transitionDelay: `${index * 150}ms`, background: 'radial-gradient(circle at top left, hsl(var(--primary)/0.05), transparent 30%)' }}
+              className="group flex flex-col overflow-hidden bg-card/80 border-border/30 hover:border-primary/50 transition-all duration-300 hover:-translate-y-1 relative shadow-lg hover:shadow-primary/20"
             >
-              <div className="absolute inset-0 border-2 border-transparent group-hover:border-primary/50 rounded-lg transition-all duration-300 pointer-events-none" 
-                   style={{ maskImage: 'radial-gradient(ellipse 100% 100% at 0% 0%, black 0%, transparent 50%)' }} />
-
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-accent/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               <CardContent className="p-0">
                 <Image
                   src={project.image}
@@ -52,17 +49,17 @@ export default function Projects() {
                   data-ai-hint={project.imageHint}
                   width={600}
                   height={400}
-                  className="object-cover w-full h-48"
+                  className="object-cover w-full h-48 transition-transform duration-300 group-hover:scale-105"
                 />
               </CardContent>
               <CardHeader>
-                <CardTitle>{project.title}</CardTitle>
+                <CardTitle className="text-primary-foreground group-hover:text-primary transition-colors duration-300">{project.title}</CardTitle>
                 <CardDescription className="pt-2 h-20">{project.description}</CardDescription>
               </CardHeader>
               <CardContent className="mt-auto">
                 <div className="flex flex-wrap gap-2">
                   {project.technologies.map((tech) => (
-                    <Badge key={tech} variant="secondary">{tech}</Badge>
+                    <Badge key={tech} variant="secondary" className="bg-secondary/50 text-secondary-foreground/80">{tech}</Badge>
                   ))}
                 </div>
               </CardContent>

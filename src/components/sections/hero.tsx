@@ -6,6 +6,22 @@ import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
 import AnimatedSection from '../animated-section';
 
+const StaggeredWord = ({ text, className }: { text: string; className?: string }) => {
+  return (
+    <span className={className}>
+      {text.split('').map((char, index) => (
+        <span
+          key={index}
+          className="inline-block animate-reveal"
+          style={{ animationDelay: `${index * 0.05}s` }}
+        >
+          {char === ' ' ? '\u00A0' : char}
+        </span>
+      ))}
+    </span>
+  );
+};
+
 export default function Hero() {
   return (
     <section className="relative h-screen flex items-center justify-center text-center bg-background overflow-hidden">
@@ -14,23 +30,22 @@ export default function Hero() {
 
       <AnimatedSection as="div" className="relative z-10 px-4">
         <h1
-          className="text-5xl sm:text-7xl md:text-8xl font-extrabold tracking-tighter mb-4 font-headline animate-fade-in-up bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400"
-          style={{ animationDelay: '0.2s' }}
+          className="text-5xl sm:text-7xl md:text-8xl font-extrabold tracking-tighter mb-4 font-headline bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400"
         >
-          Developer. Innovator.
+          <StaggeredWord text="Developer. Innovator." />
         </h1>
         <p
           className="max-w-2xl mx-auto text-lg md:text-xl text-muted-foreground mb-8 animate-fade-in-up"
-          style={{ animationDelay: '0.4s' }}
+          style={{ animationDelay: '0.8s' }}
         >
           Crafting high-performance digital experiences from server to screen.
         </p>
         <Link
           href="#projects"
           className="inline-block animate-fade-in-up"
-          style={{ animationDelay: '0.6s' }}
+          style={{ animationDelay: '1s' }}
         >
-          <Button size="lg" className="group shadow-lg shadow-primary/20 hover:shadow-primary/40 transition-shadow">
+          <Button size="lg" className="group shadow-lg shadow-primary/30 hover:shadow-primary/50 transition-shadow">
             View My Work
             <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
           </Button>
@@ -40,15 +55,31 @@ export default function Hero() {
       <style jsx>{`
         .bg-grid-pattern {
           background-image: linear-gradient(
-              hsl(var(--primary) / 0.05) 1px,
+              hsl(var(--primary) / 0.1) 1px,
               transparent 1px
             ),
             linear-gradient(
               to right,
-              hsl(var(--primary) / 0.05) 1px,
+              hsl(var(--primary) / 0.1) 1px,
               transparent 1px
             );
-          background-size: 2rem 2rem;
+          background-size: 3rem 3rem;
+        }
+
+        @keyframes reveal {
+          from {
+            opacity: 0;
+            transform: translateY(30px) skewY(10deg);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0) skewY(0deg);
+          }
+        }
+        
+        .animate-reveal {
+           animation: reveal 0.8s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
+           opacity: 0;
         }
 
         @keyframes fade-in-up {
