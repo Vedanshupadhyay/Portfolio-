@@ -66,7 +66,7 @@ export default function Contact() {
         <p className="max-w-2xl mx-auto text-center text-muted-foreground mb-12">
           Have a project in mind or just want to say hello? I'd love to hear from you.
         </p>
-        <Card className="max-w-2xl mx-auto">
+        <Card className="max-w-2xl mx-auto shadow-lg shadow-primary/10">
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
               <Mail className="w-6 h-6 text-primary" /> Contact Me

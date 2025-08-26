@@ -39,7 +39,7 @@ export default function Projects() {
           {projects.map((project, index) => (
             <Card 
               key={index} 
-              className="group overflow-hidden transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
+              className="group overflow-hidden transition-all duration-300 hover:shadow-primary/20 hover:shadow-lg hover:-translate-y-1"
             >
               <CardContent className="p-0">
                 <div className="relative aspect-video">
