@@ -9,9 +9,9 @@ import AnimatedSection from '../animated-section';
 import { cn } from '@/lib/utils';
 
 const backgroundImages = [
-  { url: 'https://picsum.photos/1920/1080?random=1', hint: 'mountain forest' },
-  { url: 'https://picsum.photos/1920/1080?random=2', hint: 'cityscape night' },
-  { url: 'https://picsum.photos/1920/1080?random=3', hint: 'ocean waves' },
+  { url: 'https://picsum.photos/1920/1080?random=4', hint: 'code editor' },
+  { url: 'https://picsum.photos/1920/1080?random=5', hint: 'circuit board' },
+  { url: 'https://picsum.photos/1920/1080?random=6', hint: 'server room' },
 ];
 
 const StaggeredWord = ({ text, className }: { text: string; className?: string }) => {
