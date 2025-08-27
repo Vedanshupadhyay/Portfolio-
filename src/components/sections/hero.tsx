@@ -47,11 +47,11 @@ export default function Hero() {
       <div className="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-transparent z-1" />
 
       <AnimatedSection as="div" className="relative z-10 px-4">
-        <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold tracking-tight mb-4">
-          Developer. Innovator.
+        <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight mb-4">
+          Full Stack Developer | Software Engineer and Innovator
         </h1>
-        <p className="max-w-2xl mx-auto text-lg md:text-xl text-muted-foreground mb-8">
-          Crafting high-performance digital experiences from server to screen.
+        <p className="max-w-3xl mx-auto text-lg md:text-xl text-muted-foreground mb-8">
+          Crafting high-performance digital experiences from server to screen with code.
         </p>
         <Link href="#projects">
           <Button size="lg" className="group">
