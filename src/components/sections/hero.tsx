@@ -10,11 +10,11 @@ import AnimatedSection from '../animated-section';
 import { cn } from '@/lib/utils';
 
 const backgroundImages = [
-  { url: 'https://picsum.photos/1920/1080?random=50', hint: 'mountain forest' },
-  { url: 'https://picsum.photos/1920/1080?random=51', hint: 'misty peaks' },
-  { url: 'https://picsum.photos/1920/1080?random=52', hint: 'alpine lake' },
-  { url: 'https://picsum.photos/1920/1080?random=53', hint: 'forest valley' },
-  { url: 'https://picsum.photos/1920/1080?random=54', hint: 'cloudy mountains' },
+  { url: 'https://picsum.photos/1920/1080?random=1', hint: 'mountain landscape' },
+  { url: 'https://picsum.photos/1920/1080?random=2', hint: 'moody forest' },
+  { url: 'https://picsum.photos/1920/1080?random=3', hint: 'dark valley' },
+  { url: 'https://picsum.photos/1920/1080?random=4', hint: 'misty mountains' },
+  { url: 'https://picsum.photos/1920/1080?random=5', hint: 'cloudy peaks' },
 ];
 
 export default function Hero() {
@@ -46,20 +46,23 @@ export default function Hero() {
       ))}
       <div className="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-transparent z-1" />
 
-      <AnimatedSection as="div" className="relative z-10 px-4">
-        <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight mb-4">
+      <div className="relative z-10 px-4 flex flex-col items-center">
+        <AnimatedSection as="h1" className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight mb-4">
           Full Stack Developer | Software Engineer and Innovator
-        </h1>
-        <p className="max-w-3xl mx-auto text-lg md:text-xl text-muted-foreground mb-8">
+        </AnimatedSection>
+        <AnimatedSection as="p" className="max-w-3xl mx-auto text-lg md:text-xl text-muted-foreground mb-8 transition-all duration-1000 ease-out delay-300">
           Crafting high-performance digital experiences from server to screen with code.
-        </p>
-        <Link href="#projects">
-          <Button size="lg" className="group">
-            View My Work
-            <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-          </Button>
-        </Link>
-      </AnimatedSection>
+        </AnimatedSection>
+        <AnimatedSection as="div" className="transition-all duration-1000 ease-out delay-500">
+          <Link href="#projects">
+            <Button size="lg" className="group">
+              View My Work
+              <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+            </Button>
+          </Link>
+        </AnimatedSection>
+      </div>
+      
       <style jsx>{`
         @keyframes ken-burns {
           0% {
