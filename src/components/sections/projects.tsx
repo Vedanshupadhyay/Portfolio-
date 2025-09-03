@@ -6,13 +6,6 @@ import { Badge } from '../ui/badge';
 
 const projects = [
   {
-    title: 'E-commerce Platform',
-    description: 'A full-featured online store with product catalogs, shopping cart, user authentication, and an admin dashboard for managing inventory and orders.',
-    image: 'https://picsum.photos/600/400?random=1',
-    imageHint: 'online shopping',
-    technologies: ['Java', 'Spring Boot', 'React', 'PostgreSQL', 'Stripe API'],
-  },
-  {
     title: 'Real-time Chat App',
     description: 'A web-based chat application that enables users to communicate in real-time through public and private channels, featuring typing indicators and online statuses.',
     image: 'https://picsum.photos/600/400?random=3',
