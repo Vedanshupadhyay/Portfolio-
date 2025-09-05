@@ -13,10 +13,10 @@ export default function About() {
           <div className="md:col-span-2">
             <div className="relative aspect-square">
               <Image
-                src="https://picsum.photos/800/800"
+                src="/profile.jpg"
                 alt="Profile picture of Vedansh Upadhyay"
-                data-ai-hint="developer portrait"
-                fill
+                width={800}
+                height={800}
                 className="rounded-lg object-cover"
               />
             </div>
