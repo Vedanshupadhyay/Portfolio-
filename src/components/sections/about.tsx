@@ -13,7 +13,7 @@ export default function About() {
           <div className="md:col-span-2">
             <div className="relative aspect-square">
               <Image
-                src="IMG_20250903_214054.jpg"
+                src="/IMG_20250903_214054.jpg"
                 alt="Profile picture of Vedansh Upadhyay"
                 width={800}
                 height={800}
