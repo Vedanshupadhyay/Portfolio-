@@ -26,7 +26,7 @@ export default function About() {
               Hello! I'm Vedansh Upadhyay, a passionate full-stack developer with a strong foundation in computer science principles and a drive for creating elegant, high-performance applications. My expertise spans from building robust back-end systems with Java to crafting dynamic and responsive user interfaces with modern web technologies.
             </p>
             <p className="text-lg text-muted-foreground mb-4">
-              I thrive on solving complex problems, whether it's optimizing algorithms (thanks to my love for DSA and OOP) or architecting scalable cloud solutions. I'm constantly learning and exploring new tools to stay at the forefront of technology.
+              I thrive on solving complex problems, whether it's optimizing algorithms (thanks to my love for DSA and OOP) or architecting scalable cloud solutions. I'm constantly learning and exploring new tools to stay at the forefront of technology. I'm also a GSA member.
             </p>
             <p className="text-lg text-muted-foreground">
               When I'm not coding, I enjoy contributing to open-source projects and exploring the latest trends in software development. Let's build something amazing together!
